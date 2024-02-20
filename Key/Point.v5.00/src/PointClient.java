@@ -7,7 +7,7 @@ public class PointClient {
 		Graphics g = panel.getGraphics();
 
 		Point.setEarthquakeOrigin(new Point(25,25));
-		Point.setEarthquakeImpactDistance(50);
+		Point.setEarthquakeImpactRadius(50);
 
 	    Point p1 = new Point(50,65);
 	    Point p2 = new Point(104,83);

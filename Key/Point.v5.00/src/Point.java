@@ -9,7 +9,7 @@ public class Point {
     private static Point earthquakeOrigin;
 
     // use static to define earthquakeImpactDistance because it should be a function of the earthquake and not the point (i.e., magnitude)
-    private static double earthquakeImpactDistance = 50;
+    private static int earthquakeImpactRadius = 50;
 
     public Point(int initialX, int initialY) {
         x = initialX;
@@ -46,8 +46,8 @@ public class Point {
         earthquakeOrigin  = p;
     }
 
-    public static void setEarthquakeImpactDistance(double d) {
-        earthquakeImpactDistance = d;
+    public static void setEarthquakeImpactRadius(int d) {
+        earthquakeImpactRadius = d;
     }
 
     public String toString() {
@@ -55,7 +55,7 @@ public class Point {
     }
 
     public void draw(Graphics g) {
-        if (earthquakeOrigin != null && distanceFromEarthquakeOrigin() < earthquakeImpactDistance)
+        if (earthquakeOrigin != null && distanceFromEarthquakeOrigin() < earthquakeImpactRadius)
             g.setColor(Color.red);
         else g.setColor(Color.black);
 
@@ -72,7 +72,7 @@ public class Point {
 
             int earthquakeCircleRadius = 5;
 
-            while (earthquakeCircleRadius <= earthquakeImpactDistance) {
+            while (earthquakeCircleRadius <= earthquakeImpactRadius) {
                 g.drawOval(earthquakeOrigin.x - earthquakeCircleRadius, earthquakeOrigin.y - earthquakeCircleRadius, 2*earthquakeCircleRadius,2*earthquakeCircleRadius);
                 earthquakeCircleRadius += 5;
             }

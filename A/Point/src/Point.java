@@ -9,4 +9,9 @@ public class Point {
         g.fillOval(x, y, 3, 3);
         g.drawString("(" + x + ", " + y + ")", x, y);
     }
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ")";
+    }
 }

@@ -6,15 +6,13 @@ public class PointClient {
         Graphics g = panel.getGraphics();
 
         Point p1 = new Point();
-        p1.x = 50;
-        p1.y = 100;
-        g.fillOval(p1.x, p1.y, 3, 3);
-        g.drawString("(" + p1.x + ", " + p1.y + ")", p1.x, p1.y);
-
-        System.out.println("Point 1 (" + p1.x + ", " + p1.y + ")");
+        p1.x = 15;
+        p1.y = 37;
+        p1.draw(g);
 
         Point p2 = new Point();
-        p2.x = 4;
-        p2.y = 3;
+        p2.x = 51;
+        p2.y = 79;
+        p2.draw(g);
     }
 }
